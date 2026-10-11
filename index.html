@@ -637,14 +637,15 @@ const SITE_CONFIG = {
     portfolio: [
       { image: "samune1.jpg", caption: "サムネ サンプル1" },
       { image: "samune2.jpg", caption: "サムネ サンプル2" },
-      { image: "", caption: "サムネテンプレート サンプル1" },
+      { image: "template1.png", caption: "サムネテンプレート サンプル1" },
+      { image: "template2.png", caption: "サムネテンプレート サンプル2" },
       { image: "rogo4.jpg", caption: "ロゴ サンプル1" },
       { image: "1518_20250618163129.png", caption: "ロゴ サンプル2" },
       { image: "1349_20240929154852.png", caption: "ロゴ サンプル3" },
       { image: "rogo3.jpg", caption: "ロゴ サンプル4" },
       { image: "rogo2.jpg", caption: "ロゴ サンプル5" },
       { image: "rogo1.jpg", caption: "ロゴ サンプル6" },
-      { image: "1349_20240929154852.png", caption: "ロゴ サンプル5" }
+      { image: "schedule1.png", caption: "予定表 サンプル1" }
     ],
     // minLeadDays: 入力した日からこの日数より前は選べないようにする
     //   7  → 7日後から選択可（サムネ / 配信画面 / その他）
@@ -789,7 +790,7 @@ function termsHTML(){
 function copyBlock(id){
   return `
     <button class="copy-btn" id="copyBtn-${id}" onclick="doCopy('${id}')">この依頼文をコピーする</button>
-    <p class="copy-hint">このままの文章でご依頼して頂けます！</p>
+    <p class="copy-hint">生成された文章を DM または ココナラ に送るだけでご依頼できます！</p>
     <div class="sns-row">
       <a class="sns-btn" href="${SITE_CONFIG.links.x}" target="_blank" rel="noopener">X（@yuno_vtb）へ</a>
       <a class="sns-btn" href="${id==='live2d'?SITE_CONFIG.links.coconalaLive2D:SITE_CONFIG.links.coconalaLogo}" target="_blank" rel="noopener">ココナラへ</a>
